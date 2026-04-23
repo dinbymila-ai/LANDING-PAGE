@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+/* 1. Configuramos la fuente global */
+body {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700; /* Para que los títulos resalten más */
+}
+p {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 300; 
+    line-height: 1.8;  
+    letter-spacing: 0.5px;
+}
+/* CLASES DE UTILIDAD (Para aplicar en HTML) */
+.text-white { color: var(--text-white) !important; }
+.text-pink { color: var(--pink) !important; }
+
+/* 3. HERO SECTION */
+.hero-section {
+    position: relative;
+    background-image: url('./img/imagen\ hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-ux-custom {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #FFFFFF; 
+    color: #000000;            
+    text-decoration: none;
+    font-weight: 600;          
+    border-radius: 5px;
+    margin-top: 20px;
+    border: none;
+    transition: all 0.3s ease;
+   }
+
+/* Efecto al pasar el mouse */
+.btn-ux-custom:hover {
+    background-color: #f0f0f0; 
+    color: #000000;
+    transform: scale(1.05);    
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);  
+}
+
+/* Para asegurar que el contenido quede encima de la capa oscura */
+.hero-content {
+    position: relative;
+    z-index: 1; 
+    text-align: center; /* <--- ESTO es lo que centra horizontalmente todo el contenido */
+    
+}
+
+:root {
+    --text-dark: #000000;
+    --text-white: #ffffff;
+    --pink: #FCA2CE;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+}
+
+.hero-section {
+    background-color: var(--bg-hero);
+    padding: 50px 0; 
+}
+
+.btn-light {
+    border-radius: 50px;
+    font-weight: 600;
+}
+.seccion-negra {
+    background-color: #000000 !important;
+    padding-top: 80px !important;    /* Controla el espacio superior */
+    padding-bottom: 80px !important; /* Controla el espacio inferior */
+    min-height: 400px;               /* Controla la altura mínima */
+}
+
+#software-section {
+    background-color: #000000; 
+    padding-top: 80px !important;    /* !important obliga al navegador a usar esto */
+    padding-bottom: 80px !important;
+             /* Asegura que ocupe todo el ancho */
+}
+
+.titulo-software {
+    color: #FCA2CE;          
+    font-weight: 800;
+    text-align: left;         /* Alineado a la izquierda */
+    margin: 10;                /*  márgenes  */
+}
+
+/* Estilo de los iconos */
+.img-software {
+    width: 95px;
+    height: 95px;
+    object-fit: contain;      /* Mantiene la proporción de la imagen */
+    transition: transform 0.3s ease;
+}
+
+.img-software:hover {
+    transform: scale(1.1);    /* Pequeño zoom al pasar el mouse */
+}    
+
+/* Ajustes de tipografía para la sección */
+h2 {
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 2; /* Espaciado entre herramientas */
+}
+
+/* --- Sección de Servicios (Alineación Final) --- */
+
+
+.service-card {
+    border: none; 
+    border-radius: 15px;
+    overflow: hidden; 
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra suave para definir la tarjeta */
+}
+
+/* Estilos para el título FUERA de la caja  */
+.service-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+    margin-top: 25px; /* Espacio superior */
+    margin-bottom: 25px; /* Espacio inferior */
+}
+
+/* Contenedor de Imagen con altura FIJA para alineación */
+.card-image-wrapper {
+    height: 240px; /* <--- AJUSTA ESTO si quieres las imágenes más bajas o altas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción sin deformar */
+}
+
+/* Caja de Contenido  */
+.card-content-wrapper {
+    background-color: #000000 !important; 
+    color: #FFFFFF;
+    padding: 30px !important; /* Padding uniforme */
+    flex-grow: 1; /* Hace que el bloque crezca para llenar la tarjeta */
+}
+
+/* Texto Justificado */
+.card-content-wrapper p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 30px; /* Espacio antes del botón */
+    text-align: justify; /* Justificado a ambos lados */
+}
+
+/* Alinea el botón siempre al fondo de la caja  */
+.mt-auto {
+    margin-top: auto; 
+}
+/* Botón Cotizar (Forzamos el estilo blanco) */
+.btn-cotizar {
+    background-color: #ffffff !important; /* Blanco sólido */
+    color: #000000 !important;           /* Texto negro */
+    border: none !important;             /* Sin borde */
+    border-radius: 50px !important;      /* Muy redondeado */
+    font-weight: 600;
+    padding: 10px 30px !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave */
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+.btn-cotizar:hover {
+    background-color: #f8f9fa !important;
+    color: #000000 !important;
+    transform: translateY(-2px);
+}
+
+
+/* Tipografía de los párrafos en las cards */
+.dashed-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: justify;
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+/* Ajuste de los H3 dentro de las cards */
+.dashed-card h3 {
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+/* Espaciado para el botón */
+
+/* Añade espacio arriba de la sección Sobre mí */
+#sobre-mi {
+    margin-top: 80px !important; /* Ajusta este valor a mi gusto (ej: 50px, 100px) */
+}
+
+#sobre-mi .btn {
+    font-weight: 600;
+}
+.sobre-mi-texto {
+    max-width: 600px;
+    margin: 0 auto; /* Centra el bloque de texto */
+    
+}
+.parrafo-justificado {
+    text-align: justify !important;
+    text-justify: inter-word !important; /* Mejora el espaciado entre palabras */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px; /* Esto evita que el texto sea una línea infinita y se lea mejor */
+}
+
+
+/* Título H1 específico para esta sección */
+.cuadro-contacto-borde h1 {
+    font-family: 'Montserrat', sans-serif; /* la misma fuente gruesa (FW-BOLD en HTML) */
+    font-size: 2.2rem; /* Tamaño grande y legible */
+    line-height: 1.2;
+}
+
+
+/* --- Unificar Colores Negros --- */
+
+/* Forzamos negro absoluto (#000000) en todas las secciones clave */
+.seccion-hero, 
+.seccion-metodologias, 
+.seccion-servicios, 
+.seccion-proyectos, 
+.seccion-contacto, 
+.seccion-sobre-mi,  /* Asegúrate de añadir esta clase a tu sección 'sobre mi' */
+footer {
+    background-color: #000000 !important; /* Negro absoluto */
+}
+
+
+.bg-dark, .bg-black {
+    background-color: #000000 !important;
+}
+.titulo-seccion-centrado {
+    display: block;                  /* Cambiamos a block */
+    margin: 0 auto;                 /* Esto centra el elemento automáticamente */
+    width: fit-content;             /* Esto hace que el cuadro se ajuste solo al ancho del texto */
+    border-bottom: 4px solid #FCD9EB !important;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    color: #FFFFFF !important;
+    text-align: center;             /* Centra el texto dentro del cuadro */
+}
+/* Padding y Fondo para la sección */
+.seccion-negra {
+    background-color: #000000 !important;
+    padding-top: 100px !important;    /* Espacio superior */
+    padding-bottom: 100px !important; /* Espacio inferior */
+}
+
+/* Alineación del Título */
+.titulo-centrado {
+    text-align: center; /* Centra el título respecto al bloque de texto */
+    display: block;
+    margin-bottom: 30px; /* Separación entre título y párrafo */
+}
+
+/* Alineación del Párrafo (Justificado) */
+.texto-justificado {
+    text-align: justify; /* Alinea texto a ambos lados */
+    line-height: 1.8;    /* Mejora la legibilidad */
+    margin-bottom: 0;
+}
+
+/* Color específico para el título */
+.text-pink {
+    color: #FCA2CE !important; 
+    font-weight: 800;
+}
+/* Variables de color (para que sea más fácil) */
+:root {
+    --text-pink: #FCA2CE;
+}
+
+/* 1. SECCIÓN PRINCIPAL: Fondo negro y padding hacia ABAJO */
+#sobre-mi-seccion {
+    background-color: #000000 !important;
+    
+    /* El Padding es para que el texto no toque los bordes arriba y abajo */
+    padding-top: 0px !important;    
+    padding-bottom: 0px !important;
+    
+    /* El MARGIN es el espacio de separación entre secciones */
+    margin-bottom: 20px !important; /* <--- Esto creará el espacio "fuera" de la caja negra */
+    
+    width: 100% !important;
+}
+
+/* 2. IMAGEN PEGADA AL BORDE */
+.img-sobre-mi {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* Asegurar que las columnas no tengan padding extra */
+.seccion-negra .col-md-6.p-0 {
+    padding: 0 !important;
+}
+
+/* 3. CONTENEDOR DE TEXTO: Alineación central */
+.container-texto {
+    display: flex;
+    justify-content: center; /* Centrado horizontal del bloque de texto */
+    padding: 50px !important; /* Espacio interno para que el texto no toque bordes */
+}
+
+/* 4. BLOQUE DE CONTENIDO: Ancho máximo para el párrafo y centrado del título/botón */
+.contenido-texto {
+    max-width: 80%; /* Ajusta esto si quieres el bloque más ancho o estrecho */
+    width: 100%;
+}
+
+/* 5. TÍTULO: Rosado y centrado */
+.seccion-negra .text-pink {
+    color: var(--text-pink) !important;
+    font-weight: 800;
+}
+
+/* 6. PÁRRAFO: Justificado */
+.seccion-negra p.text-justify {
+    text-align: justify !important;
+    line-height: 1.8;
+}
+
+/* Asegurar que los botones estén centrados dentro de su contenedor .text-center */
+.seccion-negra .text-center .btn-cotizar {
+    display: inline-block;
+}
+/* --- Sección Skills Academy (Caso de Estudio) --- */
+
+.skills-academy-section {
+    position: relative;
+    /* 1. Fondo gigante */
+    background-image: url(./img/fondo\ skills.png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-color: #000000; /* Fondo base negro */
+    
+}
+
+/* Imagen del Título */
+.logo-skills {
+    max-width: 400px; /* Ajusta el tamaño del logo PNG */
+    width: 100%;
+    height: auto;
+}
+
+/* Subtítulo */
+.subtitle-skills {
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}
+
+/* Títulos Verdes */
+.text-green {
+    color: #47F59A !important;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Clases de utilidad para el Zig-Zag */
+.text-justify {
+    text-align: justify !important;
+    line-height: 1.5;
+}
+
+/* Iconos de Herramientas */
+.icon-tool {
+    width: 120px;
+    height: 120px;
+}
+
+/* Iconos de Habilidades (Parte Final) */
+.skill-icon {
+    width: 100px; /* Tamaño del icono */
+    height: 100px;
+}
+
+.skill-icon-block {
+    max-width: 100px; /* Ancho para que el texto no se extienda mucho */
+}
+
+.skill-icon-block p.small {
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+
+/* --- Ajuste Responsivo --- */
+@media (max-width: 800px) {
+    /* En celular, todos los títulos alineados al centro */
+    .text-green {
+        text-align: center !important;
+    }
+    .text-start, .text-end {
+        text-align: center !important;
+    }
+}
+/* Nuevo contenedor para que el texto sea angosto */
+.text-narrower {
+    max-width: 450px; /* Ajusta este valor: menor número = texto más angosto */
+    margin: 0 auto;   /* Esto ayuda a centrar el bloque de texto si la columna es muy grande */
+    padding: 0 15px;  /* Un poco de aire a los lados */
+}
+
+/* Para asegurar que las imágenes resalten más */
+.img-fluid {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen mantenga proporción sin deformarse */
+}
+/* Eliminar márgenes del body si existen */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Esto evita que aparezca una barra de scroll horizontal */
+}
+
+/* Fuerza a la imagen a ser un bloque total */
+.img-full-bleed {
+    width: 100% !important;
+    height: auto;
+    display: block !important; /* IMPORTANTE: Esto elimina el espacio extra debajo de las imágenes */
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Asegurar que la columna no tenga nada que la separe */
+.col-md-7 {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.footer-section {
+    background-color: #000; /* Asegura el fondo negro */
+    color: white;
+}
+
+.footer-icon {
+    width: 30px; /* Ajusta el tamaño de iconos */
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Espacio entre iconos y texto */
+.ms-2 {
+    margin-left: 8px;
+}
+
+/* Opcional: Que los enlaces se vean bien */
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
